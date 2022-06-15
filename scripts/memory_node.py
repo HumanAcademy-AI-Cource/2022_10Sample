@@ -12,7 +12,7 @@ pub = rospy.Publisher("/raspi_memory", Float64, queue_size=1)
 
 while not rospy.is_shutdown():
     # RaspberryPiのメモリ使用率を調べる
-    
+    memory = psutil.virtual_memory()
 
     # RaspberryPiのメモリ使用率を変数に入れる
     memory_info = Float64()
