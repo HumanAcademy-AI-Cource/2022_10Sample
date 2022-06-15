@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="iot_practice" name="temp" type="temp_node.py" required="true" output="screen" />
+  <node pkg="iot_practice" name="temp_display" type="temp_display_node.py" required="true" output="screen" />
+  <node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" args="/raspi_temp" />
+</launch>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9000"/>
+  </include>
+  <include file="$(find wr_pi_extend_board_driver)/launch/core.launch" />
+  <node pkg="iot_practice" name="web_server" type="web_server_node.py" required="true" output="screen" />
+  <node pkg="iot_practice" name="temp" type="temp_node.py" required="true" output="screen" />
+  <node pkg="iot_practice" name="memory" type="memory_node.py" required="true" output="screen" />
+  
+  <node name="usb_cam" pkg="usb_cam" type="usb_cam_node">
+    <param name="video_device" value="/dev/video0"/>
+    <param name="image_width" value="320"/>
+    <param name="image_height" value="240"/>
+    <param name="pixel_format" value="yuyv"/>
+    <param name="framerate" value="30"/>
+  </node>
+</launch>

@@ -1,0 +1,7 @@
+body {
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+html {
+    touch-action: manipulation;
+}

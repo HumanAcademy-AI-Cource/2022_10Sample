@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4">AI Starter Kit</h1>
+                    <h5 class="display-5">- ROS Version -</h5>
+                    <h5 id="date" style="font-size: 15px;">【現在時刻】</h5>
+                    <table class="table table-bordered" style="width: 340px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">コンピュータ情報</th>
+                                <th scope="col">数値</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th style="font-weight: normal;">温度</th>
+                                <td id="temp">未更新</td>
+                            </tr>
+                            <tr>
+                                <th style="font-weight: normal;">メモリ使用率</th>
+                                <td id="memory">未更新</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <div class="card" style="width: 340px;">
+                        <div class="card-body">
+                            <h5 class="card-title">WebCamera</h5>
+                            <p class="card-text">
+                                <img id="image" style="border: 1px solid #000;" src="" width="300px"></img>
+                            </p>
+                            <div style="text-align: center;">
+                                <button id="left-button" type="button" style="margin-right: 60px; font-size: 30px;"
+                                    class="btn btn-dark">⇦</button>
+                                <button id="right-button" type="button" style="font-size: 30px;" class="btn btn-dark">⇨</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+        <script src="https://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+
+</html>
